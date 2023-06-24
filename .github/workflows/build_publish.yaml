@@ -20,8 +20,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           distribution: 'adopt'
-          java-version: ${{ matrix.java-version }}
-           distribution:'zulu' 
+          java-version: ${{ matrix.java-version }}           
         if: ${{ matrix.java-version == '11' }}
         continue-on-error: true                   
       - name: Cache SonarCloud packages
@@ -41,5 +40,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dmaven.test.skip=true -Dsonar.projectKey=mandalaswamysudheerkumar_openmrs-module-bahmnicommons
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mandalaswamysudheerkumar_openmrs-module-bahmnicommons
         
