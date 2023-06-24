@@ -55,6 +55,8 @@
         <mockitoVersion>3.12.4</mockitoVersion>
         <argLine>-Xmx1024m</argLine>
         <jacocoVersion>0.8.8</jacocoVersion>
+        <sonar.organization>mandalaswamysudheerkumar</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <distributionManagement>
